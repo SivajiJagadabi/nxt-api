@@ -5,7 +5,7 @@ const mysql = require('mysql')
 const PORT=process.env.PORT || 3001
 
 
-app.use(cors())
+app.use(cors({origin:["http://localhost:3001/signup"]}))
 app.use(express.json())
 
 const db = mysql.createConnection({
